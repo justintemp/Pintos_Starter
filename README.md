@@ -56,3 +56,5 @@ You really only care about the first one. Copy the entire command except for eve
 Copy that command into a file (e.g. test-new-test.sh) so that it's easier to run and so that it doesn't get overwritten when you try to copy something else. Also make sure the file is an executable so you can actually run it `sudo chmod 755 test-new-test.sh`.
 
 See the `test-args-none.sh` file in the `userprog` directory that I've provided for you to see an example of what your file should look like.
+
+WARNING: You can just change the test name in your script in order to run different tests. This will work most of the time, but some of the tests get run with different arguments and will fail if you don't give it the right command
