@@ -64,6 +64,8 @@ start_process (void *file_name_)
   struct intr_frame if_;
   bool success;
 
+  log(L_TRACE, "start_process()");
+
   /* Initialize interrupt frame and load executable. */
   memset (&if_, 0, sizeof if_);
   if_.gs = if_.fs = if_.es = if_.ds = if_.ss = SEL_UDSEG;
@@ -218,6 +220,7 @@ static bool load_segment (struct file *file, off_t ofs, uint8_t *upage,
 bool
 load (const char *file_name, void (**eip) (void), void **esp)
 {
+  log(L_TRACE, "load()");
   struct thread *t = thread_current ();
   struct Elf32_Ehdr ehdr;
   struct file *file = NULL;
@@ -396,6 +399,8 @@ load_segment (struct file *file, off_t ofs, uint8_t *upage,
   ASSERT ((read_bytes + zero_bytes) % PGSIZE == 0);
   ASSERT (pg_ofs (upage) == 0);
   ASSERT (ofs % PGSIZE == 0);
+  
+  log(L_TRACE, "load_segment()");
 
   file_seek (file, ofs);
   while (read_bytes > 0 || zero_bytes > 0)
@@ -442,6 +447,8 @@ setup_stack (void **esp)
   uint8_t *kpage;
   bool success = false;
 
+  log(L_TRACE, "setup_stack()");
+  
   kpage = palloc_get_page (PAL_USER | PAL_ZERO);
   if (kpage != NULL)
     {

@@ -5,7 +5,7 @@
 #include "lib/stdbool.h"
 #include "lib/stdio.h"
 
-#define LOGGING_ENABLE 0
+#define LOGGING_ENABLE 1
 
 #ifndef LOGGING_LEVEL
 #define LOGGING_LEVEL 6

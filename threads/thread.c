@@ -11,6 +11,7 @@
 #include "threads/switch.h"
 #include "threads/synch.h"
 #include "threads/vaddr.h"
+#include "lib/log.h"
 #ifdef USERPROG
 #include "userprog/process.h"
 #endif
@@ -105,6 +106,7 @@ thread_init (void)
 void
 thread_start (void)
 {
+	log(L_TRACE, "thread_start");
   /* Create the idle thread. */
   struct semaphore idle_started;
   sema_init (&idle_started, 0);
