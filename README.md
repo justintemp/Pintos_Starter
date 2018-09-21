@@ -37,7 +37,7 @@ With the help of Dr. Google, I was able to write a convenient script for you all
 2. The list of all the tests can be seen by running `ls build/tests/userprog` (all of the green executables in here are test files)
 
 Things to note
-   - You redirect anything you don't care about to /dev/null
+   - You can redirect anything you don't care about to /dev/null
    - The script redirects the result of the test to /dev/null and prints the output of the test by default. You can easily change this by changing the file redirection
 
 # How to debug a pintos test with GDB
