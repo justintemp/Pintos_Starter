@@ -1,4 +1,4 @@
-#Steps on how to duplicate this starter repo:
+# Steps on how to duplicate this starter repo:
 
 0. Obtain [private repos](https://help.github.com/articles/applying-for-a-student-developer-pack/) for free 
 1. Go to Github and create a private repo
@@ -13,9 +13,7 @@
 7. Commit the code `git commit -m "initial commit"`
 8. Push the code to your remote repo
 
-#To install pintos, run this command: 
-
-`source install.sh`
+# To install pintos, run this command: `source install.sh`
 
 If that doesn't work, read the error messages.
 You'll most likely have to install a few packages first:
