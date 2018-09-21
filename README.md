@@ -11,7 +11,7 @@
 5. Change the remote repo to point to your own git repo. First go to your repo and find the `git remote add origin` command. Copy that line and then run it
 6. Add all the code with `git add .`
 7. Commit the code `git commit -m "initial commit"`
-8. Push the code to your remote repo `git push`
+8. Push the code to your remote repo and set the upstream `git push --set-upstream origin master`
 
 # Steps on how to install pintos
 
