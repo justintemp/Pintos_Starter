@@ -30,31 +30,8 @@
 
 # How to run a single pintos test
 
-The easiest thing to do is run `make check` and then copy the command being run into a script. For example you might see something like this
+With the help of Dr. Google, I was able to write a convenient script for you all.
 
-```
-cd build && make check
-make[1]: Entering directory '/home/justin/Github/Pintos_Labs/userprog/build'
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none < /dev/null 2> tests/userprog/args-none.errors > tests/userprog/args-none.output
-perl -I../.. ../../tests/userprog/args-none.ck tests/userprog/args-none tests/userprog/args-none.result
-fail tests/userprog/args-none
-```
-
-There are three things for each test that gets run:
-
-(1)
-`pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none < /dev/null 2> tests/userprog/args-none.errors > tests/userprog/args-none.output`
-
-(2)
-`perl -I../.. ../../tests/userprog/args-none.ck tests/userprog/args-none tests/userprog/args-none.result`
-
-(3)
-`fail tests/userprog/args-none`
-
-You really only care about the first one. Copy the entire command except for everything after the `< /dev/null` part since that is just used to redirect output and error messages (look familiar?)
-
-Copy that command into a file (e.g. test-new-test.sh) so that it's easier to run and so that it doesn't get overwritten when you try to copy something else. Also make sure the file is an executable so you can actually run it `sudo chmod 755 test-new-test.sh`.
-
-See the `test-args-none.sh` file in the `userprog` directory that I've provided for you to see an example of what your file should look like.
-
-WARNING: You can just change the test name in your script in order to run different tests. This will work most of the time, but some of the tests get run with different arguments and will fail if you don't give it the right command
+0. Open up the `run_pintos_tests.sh` file in the `userprog` directory and change it to use the tests that you want to run
+1. Simply add to (or remove from) the list of test files you see in the TEST_FILES variable
+2. The list of all the tests can be seen by running `ls build/tests/userprog` (all of the green executables in here are test files)
