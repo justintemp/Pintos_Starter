@@ -5,7 +5,7 @@
    - Don't do anything fancy yet (i.e. don't initialize the repo with a readme, don't add a .gitignore, etc)
    - Just give it a name, make sure to choose "private," and then click "create repository"
 2. Clone this repo with `git clone https://github.com/justintemp/Pintos_Starter.git`
-3. Cd into the folder you just cloned
+3. Cd into the folder you just cloned `cd Pintos_Starter`
 4. Change the .git folder with `rm -rf .git`
 5. Create a blank .git folder with `git init`
 5. Change the remote repo to point to your own git repo. First go to your repo and find the `git remote add origin` command. Copy that line and then run it
