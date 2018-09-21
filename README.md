@@ -35,3 +35,46 @@ With the help of Dr. Google, I was able to write a convenient script for you all
 0. Open up the `run_pintos_tests.sh` file in the `userprog` directory and change it to use the tests that you want to run
 1. Simply add to (or remove from) the list of test files you see in the `TEST_FILES` variable
 2. The list of all the tests can be seen by running `ls build/tests/userprog` (all of the green executables in here are test files)
+
+# How to debug a pintos test with GDB
+
+This is rather cumbersome, so just bear with me.
+
+First run `make check` and then kill it with Ctrl-c after you get some output that looks like this:
+
+```
+cd build && make check
+make[1]: Entering directory '/home/justin/Github/Pintos_Labs/userprog/build'
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none < /dev/null 2> tests/userprog/args-none.errors > tests/userprog/args-none.output
+perl -I../.. ../../tests/userprog/args-none.ck tests/userprog/args-none tests/userprog/args-none.result
+fail tests/userprog/args-none
+```
+
+There are three things for each test that gets run:
+
+(1)
+`pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none < /dev/null 2> tests/userprog/args-none.errors > tests/userprog/args-none.output`
+
+(2)
+`perl -I../.. ../../tests/userprog/args-none.ck tests/userprog/args-none tests/userprog/args-none.result`
+
+(3)
+`fail tests/userprog/args-none`
+
+You really only care about the first one. Copy the entire command except for everything after the `< /dev/null` part since that is just used to redirect output and error messages (look familiar?)
+
+Paste what you just copied onto the command line. 
+   - Don't press enter yet
+   - Edit the beginning of the command to say `pintos --gdb` instead of just `pintos`
+   - Make sure the path is right (i.e. change the `tests/userprog/args-none` to have build/ in front of it: `build/tests/userprog/args-none`
+   - Now you can hit enter
+
+You'll notice that the output is paused. This is because the pintos process you just ran is waiting for you to attach your GDB debugger. 
+
+Open up a new terminal tab with the shortcut Ctrl-Shift-t
+   - Run the script to attach your GDB debugger to the running pintos process: `./attachGdb.sh`
+   - The script launches gdb with the `--tui` flag by default (you can remove this if you'd like)
+   - The first command you should always run is `debugpintos` (nothing will work without running this)
+   - Then you're all set
+
+For a debugging demonstration in video form, please check out Dr. Yerraballi's [video](https://utexas.app.box.com/s/2r357h16t4xc1xeg3kva69i754ie18yf).
