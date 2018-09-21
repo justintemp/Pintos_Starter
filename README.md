@@ -23,7 +23,7 @@
 
 # How to run all of the pintos tests
 
-0. Go into the directory for the current project (at first it'll be userprog/): `cd userprog`
+0. Go into the directory for the current project (for the first pintos project, this will be the userprog directory): `cd userprog`
 1. Build the directory with `make`
 2. Run `make check`:
    - You'll see a lot of stuff being output, but if you're patient for about 10-30 minutes, you'll get a summary of your results at the end.
