@@ -51,8 +51,8 @@ There are three things for each test that gets run:
 (3)
 `fail tests/userprog/args-none`
 
-You really only care about the first one. Copy the entire command except for the `< /dev/null 2> tests/userprog/args-none.errors > tests/userprog/args-none.output` part since that is just used to redirect output and error messages (look familiar?)
+You really only care about the first one. Copy the entire command except for everything after the `< /dev/null` part since that is just used to redirect output and error messages (look familiar?)
 
 Copy that command into a file (e.g. test-new-test.sh) so that it's easier to run and so that it doesn't get overwritten when you try to copy something else. Also make sure the file is an executable so you can actually run it `sudo chmod 755 test-new-test.sh`.
 
-See the test-args-none.sh file I've provided for an example of what your file should look like.
+See the `test-args-none.sh` file in the `userprog` directory that I've provided for you to see an example of what your file should look like.
