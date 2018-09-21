@@ -26,7 +26,7 @@
 0. Go into the directory for the current project (at first it'll be userprog/): `cd userprog`
 1. Build the directory with `make`
 2. Run `make check`:
-   - You'll see a lot of stuff being output, but if you're patient for ~10 minutes, you'll get a summary of your results at the end
+   - You'll see a lot of stuff being output, but if you're patient for about 10-30 minutes, you'll get a summary of your results at the end.
 
 # How to run a single pintos test
 
