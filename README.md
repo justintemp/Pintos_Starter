@@ -16,6 +16,7 @@
 # How to install pintos
 
 0. Make sure that the dependencies have been installed:
+   - `sudo apt-get update`
    - `sudo apt-get install qemu`
    - `sudo apt-get install realpath`
 1. Run this command: `source install.sh`
