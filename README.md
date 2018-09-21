@@ -33,5 +33,5 @@
 With the help of Dr. Google, I was able to write a convenient script for you all.
 
 0. Open up the `run_pintos_tests.sh` file in the `userprog` directory and change it to use the tests that you want to run
-1. Simply add to (or remove from) the list of test files you see in the TEST_FILES variable
+1. Simply add to (or remove from) the list of test files you see in the `TEST_FILES` variable
 2. The list of all the tests can be seen by running `ls build/tests/userprog` (all of the green executables in here are test files)
