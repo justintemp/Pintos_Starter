@@ -22,6 +22,13 @@
 1. Run this command: `source install.sh`
 2. If that doesn't work, read the error messages.
 
+# How to check if pintos was installed correctly 
+
+0. Cd into the `userprog` directory 
+1. Run `make` 
+2. Run `make check` 
+   - This should take around 5-10 minutes to finish. If you get a bunch of tests being run and at the end you get 76/76 test cases failed, then your installation worked 
+
 # How to run all of the pintos tests
 
 0. Go into the directory for the current project (for the first pintos project, this will be the userprog directory): `cd userprog`
