@@ -6,3 +6,5 @@ tags
 *.a
 *~
 .DS_Store
+.PINTOS_PATH
+utils/qemu
