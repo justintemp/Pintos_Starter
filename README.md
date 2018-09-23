@@ -28,10 +28,11 @@
 1. Run `make` 
 2. Run `make check` 
    - This should take around 5-10 minutes to finish. If you get a bunch of tests being run and at the end you get 76/76 test cases failed, then your installation worked
-   - If it doesn't finish (i.e. you get stuck in an infinte loop then the installation didn't work).
+   - If it doesn't finish (e.g. you get stuck in an infinte loop then the installation didn't work)
+   - If you are using a newer version of Linux and have an infinite loop, please follow the instructions [here](https://github.com/justintemp/Pintos_Starter/blob/master/temp/PintosFixInfiniteLoop.md)
    - The final output should look like this
    
-   ![alt text](https://github.com/justintemp/Pintos_Starter/raw/master/temp_img/PintosInstallSucess.png "Wow I can't believe you failed all of the tests")
+   ![alt text](https://github.com/justintemp/Pintos_Starter/raw/master/temp/PintosInstallSucess.png "Wow I can't believe you failed all of the tests")
 
 # How to run all of the pintos tests
 
