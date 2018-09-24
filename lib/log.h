@@ -17,7 +17,6 @@
 #define CONVERT_TO_STRING(arg) #arg
 #define AS_STRING(arg) CONVERT_TO_STRING(arg)
 
-static int  log_missed_logs = 0;
 static char log_buf[LOG_MAX_LOG_SIZE];
 static char log_before_buf[LOG_MAX_BEFORE_SIZE];
 
@@ -59,7 +58,7 @@ static inline const char* log_level_color(LoggingLevel level) {
     return NULL;
 }
 
-static inline void log_printf() {
+static inline void log_printf(void) {
     printf("%-" AS_STRING(LOG_MAX_BEFORE_SIZE) "s | %s%s\n", (char*)&log_before_buf, (char*)&log_buf, log_level_color(L_NONE));
 }
 
