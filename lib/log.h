@@ -35,7 +35,7 @@ static inline const char* log_level_name(LoggingLevel level) {
         case L_TRACE: return "TRACE";
         case L_DEBUG: return "DEBUG";
         case L_INFO: return "INFO";
-        case L_WARN: return "WAGRN";
+        case L_WARN: return "WARN";
         case L_ERROR: return "ERROR";
         case L_FATAL: return "FATAL";
         case L_NONE: return "NONE";
