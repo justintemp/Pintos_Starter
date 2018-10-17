@@ -399,7 +399,7 @@ load_segment (struct file *file, off_t ofs, uint8_t *upage,
   ASSERT ((read_bytes + zero_bytes) % PGSIZE == 0);
   ASSERT (pg_ofs (upage) == 0);
   ASSERT (ofs % PGSIZE == 0);
-  
+
   log(L_TRACE, "load_segment()");
 
   file_seek (file, ofs);
@@ -448,15 +448,18 @@ setup_stack (void **esp)
   bool success = false;
 
   log(L_TRACE, "setup_stack()");
-  
+
   kpage = palloc_get_page (PAL_USER | PAL_ZERO);
   if (kpage != NULL)
     {
       success = install_page (((uint8_t *) PHYS_BASE) - PGSIZE, kpage, true);
-      if (success)
+      if (success) {
         *esp = PHYS_BASE;
-      else
+	  }
+      else {
         palloc_free_page (kpage);
+	  }
+	  // hex_dump( *(int*)esp, *esp, 128, true ); // NOTE: uncomment this to check arg passing
     }
   return success;
 }

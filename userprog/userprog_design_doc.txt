@@ -1,5 +1,5 @@
 		     +--------------------------+
-       	       	     |		EE461S		|
+       	     |        EE461S		    |
 		     | PROJECT 2: USER PROGRAMS	|
 		     | 	   DESIGN DOCUMENT     	|
 		     +--------------------------+

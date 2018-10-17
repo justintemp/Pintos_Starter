@@ -2,7 +2,7 @@
 
 TEST_FILES='
 args-none
-exec-once
+page-parallel
 '
 
 for file in $TEST_FILES; do
