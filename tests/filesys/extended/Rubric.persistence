@@ -21,4 +21,3 @@ Persistence of file system:
 1	grow-sparse-persistence
 1	grow-tell-persistence
 1	grow-two-files-persistence
-1	syn-rw-persistence
