@@ -99,33 +99,6 @@ FirstName LastName <email@domain.example>
 >> where your design falls along this continuum and why you chose to
 >> design it this way.
 
-			 MEMORY MAPPED FILES
-			 ===================
-
----- DATA STRUCTURES ----
-
->> C1: Copy here the declaration of each new or changed `struct' or
->> `struct' member, global or static variable, `typedef', or
->> enumeration.  Identify the purpose of each in 25 words or less.
-
----- ALGORITHMS ----
-
->> C2: Describe how memory mapped files integrate into your virtual
->> memory subsystem.  Explain how the page fault and eviction
->> processes differ between swap pages and other pages.
-
->> C3: Explain how you determine whether a new file mapping overlaps
->> any existing segment.
-
----- RATIONALE ----
-
->> C4: Mappings created with "mmap" have similar semantics to those of
->> data demand-paged from executables, except that "mmap" mappings are
->> written back to their original files, not to swap.  This implies
->> that much of their implementation can be shared.  Explain why your
->> implementation either does or does not share much of the code for
->> the two situations.
-
 			   SURVEY QUESTIONS
 			   ================
 
