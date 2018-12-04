@@ -39,15 +39,24 @@
    
    ![alt text](https://github.com/justintemp/Pintos_Starter/raw/master/temp/PintosInstallSucess.png "Wow I can't believe you failed all of the tests")
    
-# Installation notes
+# How to fix the installation
 
 0. Even if you install pintos correctly, it could end up not being installed correctly later down the line if you change your directory structure
 1. You'll know if there is an issue if you can't run `make check` and if `which pintos` doesn't output anything.
 2. To fix that, you can try re-running the script
 3. If that doesn't work, take a look at the following files
 4. In your `~/.bashrc` file, there should be a line that looks something like this with the correct path to your `.PINTOS_PATH` file: `source /home/username/Pintos_Starter/.PINTOS_PATH`. You can see files that start with `.` by running `ls -al`
-5. Check the contents of the `.PINTOS_PATH` file. It should look something like this: `export PATH=$PATH:/home/username/Pintos_Starter/utils`
-6. In your `~/.bashrc` file, there should also be something that looks like this: `alias pintos-gdb='GDBMACROS=/home/username/Pintos_Starter/misc/gdb-macros pintos-gdb'`
+5. Check the contents of the `.PINTOS_PATH` file. It should look something like this: 
+
+`export PATH=$PATH:/home/username/Pintos_Starter/utils`
+
+6. In your `~/.bashrc` file, there should also be something that looks like this: 
+
+`alias pintos-gdb='GDBMACROS=/home/username/Pintos_Starter/misc/gdb-macros pintos-gdb'`
+
+7. Run `echo $PATH`. It should have a bunch of stuff, but there should be something like this in it: 
+
+`/home/username/Pintos_Starter/utils/`
 
 # How to run all of the pintos tests
 
