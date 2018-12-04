@@ -39,9 +39,9 @@
    
    ![alt text](https://github.com/justintemp/Pintos_Starter/raw/master/temp/PintosInstallSucess.png "Wow I can't believe you failed all of the tests")
    
-# How to fix the installation
+# How to fix the installation if it suddenly stopped working
 
-0. Even if you install pintos correctly, it could end up not being installed correctly later down the line if you change your directory structure
+0. Even if you install pintos correctly, it could end up not being installed correctly later down the line if you change your directory structure (this is because your paths to the pintos files changed)
 1. You'll know if there is an issue if you can't run `make check` and if `which pintos` doesn't output anything.
 2. To fix that, you can try re-running the script
 3. If that doesn't work, take a look at the following files
