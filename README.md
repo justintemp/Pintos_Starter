@@ -40,6 +40,11 @@
 1. Build the directory with `make`
 2. Run `make check`:
    - You'll see a lot of stuff being output, but if you're patient for about 10-30 minutes, you'll get a summary of your results at the end.
+   
+# How to get your grade
+
+0. The tests are weighted. You can see the actual grade by running `make grade`
+1. Some of the tests involve synchronization and race conditions. The grading script runs 3 times and takes the lowest of the 3 grades so make sure to run `make grade` several times and make sure you get the same grade each time
 
 # How to run a single pintos test
 
