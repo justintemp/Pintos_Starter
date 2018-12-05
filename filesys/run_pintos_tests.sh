@@ -1,8 +1,9 @@
 #!/bin/bash
 
+# Change this to have the test(s) you want to run
 TEST_FILES='
 args-none
-dir-open
+dir-mk-tree
 '
 
 for file in $TEST_FILES; do

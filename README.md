@@ -1,5 +1,9 @@
 # How to make a copy of this starter repo:
 
+
+
+**WARNING: The commands here assume you run them blindly except for step 5. Don't `cd` around or anything like that and read these instructions carefully. It should be pretty simple**
+
 0. Obtain [private repos](https://help.github.com/articles/applying-for-a-student-developer-pack/) for free 
 1. Go to Github and create a private repo:
    - Don't do anything fancy yet (i.e. don't initialize the repo with a readme, don't add a .gitignore, etc)
@@ -8,7 +12,7 @@
 3. Cd into the folder you just cloned `cd Pintos_Starter`
 4. Change the .git folder with `rm -rf .git`
 5. Create a blank .git folder with `git init`
-5. Change the remote repo to point to your own git repo. First go to your repo and find the `git remote add origin` command. Copy that line and then run it
+5. **Don't blindly copy this step.** Change the remote repo to point to your own git repo. First go to your repo and find the "git remote add origin" command on the webpage. Copy that line and then run it
 6. Add all the code with `git add .`
 7. Commit the code `git commit -m "initial commit"`
 8. Push the code to your remote repo and set the upstream `git push --set-upstream origin master`
@@ -24,15 +28,35 @@
 
 # How to check if pintos was installed correctly 
 
-0. Cd into the `userprog` directory 
-1. Run `make` 
-2. Run `make check` 
+0. Run `which pintos`. It should output something like this: `/home/username/utils/pintos`
+1. Cd into the `userprog` directory 
+2. Run `make` 
+3. Run `make check` 
    - This should take around 5-10 minutes to finish. If you get a bunch of tests being run and at the end you get 76/76 test cases failed, then your installation worked
    - If it doesn't finish (e.g. you get stuck in an infinte loop then the installation didn't work)
    - If you are using a newer version of Linux and have an infinite loop, please follow the instructions [here](https://github.com/justintemp/Pintos_Starter/blob/master/temp/PintosFixInfiniteLoop.md)
    - The final output should look like this
    
    ![alt text](https://github.com/justintemp/Pintos_Starter/raw/master/temp/PintosInstallSucess.png "Wow I can't believe you failed all of the tests")
+   
+# How to fix the installation if it suddenly stopped working
+
+0. Even if you install pintos correctly, it could end up not being installed correctly later down the line if you change your directory structure (this is because your paths to the pintos files changed)
+1. You'll know if there is an issue if you can't run `make check` and if `which pintos` doesn't output anything.
+2. To fix that, you can try re-running the script
+3. If that doesn't work, take a look at the following files
+4. In your `~/.bashrc` file, there should be a line that looks something like this with the correct path to your `.PINTOS_PATH` file: `source /home/username/Pintos_Starter/.PINTOS_PATH`. You can see files that start with `.` by running `ls -al`
+5. Check the contents of the `.PINTOS_PATH` file. It should look something like this: 
+
+`export PATH=$PATH:/home/username/Pintos_Starter/utils`
+
+6. In your `~/.bashrc` file, there should also be something that looks like this: 
+
+`alias pintos-gdb='GDBMACROS=/home/username/Pintos_Starter/misc/gdb-macros pintos-gdb'`
+
+7. Run `echo $PATH`. It should have a bunch of stuff, but there should be something like this in it: 
+
+`/home/username/Pintos_Starter/utils/`
 
 # How to run all of the pintos tests
 
@@ -40,6 +64,11 @@
 1. Build the directory with `make`
 2. Run `make check`:
    - You'll see a lot of stuff being output, but if you're patient for about 10-30 minutes, you'll get a summary of your results at the end.
+   
+# How to get your grade
+
+0. The tests are weighted. You can see the actual grade by running `make grade`
+1. Some of the tests involve synchronization and race conditions. The grading script runs 3 times and takes the lowest of the 3 grades so make sure to run `make grade` several times and make sure you get the same grade each time
 
 # How to run a single pintos test
 
