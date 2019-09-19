@@ -35,6 +35,7 @@
    - This should take around 5-10 minutes to finish. If you get a bunch of tests being run and at the end you get 76/76 test cases failed, then your installation worked
    - If it doesn't finish (e.g. you get stuck in an infinte loop then the installation didn't work)
    - If you are using a newer version of Linux and have an infinite loop, please follow the instructions [here](https://github.com/justintemp/Pintos_Starter/blob/master/temp/PintosFixInfiniteLoop.md)
+     - **NOTE:** you may not have to do this ^ anymore. Trey pushed a commit that should have fixed this issue of needing to downgrade your gcc version
    - The final output should look like this
    
    ![alt text](https://github.com/justintemp/Pintos_Starter/raw/master/temp/PintosInstallSucess.png "Wow I can't believe you failed all of the tests")
