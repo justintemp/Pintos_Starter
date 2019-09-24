@@ -1,21 +1,7 @@
-# How to make a copy of this starter repo:
+# Pre-reqs
 
-
-
-**WARNING: The commands here assume you run them blindly except for step 5. Don't `cd` around or anything like that and read these instructions carefully. It should be pretty simple**
-
-0. Obtain [private repos](https://help.github.com/articles/applying-for-a-student-developer-pack/) for free 
-1. Go to Github and create a private repo:
-   - Don't do anything fancy yet (i.e. don't initialize the repo with a readme, don't add a .gitignore, etc)
-   - Just give it a name, make sure to choose "private," and then click "create repository"
-2. Clone this repo with `git clone https://github.com/justintemp/Pintos_Starter.git`
-3. Cd into the folder you just cloned `cd Pintos_Starter`
-4. Change the .git folder with `rm -rf .git`
-5. Create a blank .git folder with `git init`
-5. **Don't blindly copy this step.** Change the remote repo to point to your own git repo. First go to your repo and find the "git remote add origin" command on the webpage. Copy that line and then run it
-6. Add all the code with `git add .`
-7. Commit the code `git commit -m "initial commit"`
-8. Push the code to your remote repo and set the upstream `git push --set-upstream origin master`
+0. You should have obtained access to this starter code after submitting your team name to the Github Classroom assignment (you should receive an invite via your Github email after the TAs create the assignment).
+1. Make sure that both partners have read and write access to the repo and that it is private
 
 # How to install pintos
 
