@@ -1,8 +1,8 @@
 #!/bin/bash
 
+# NOTE: change this to the test name(s)
 TEST_FILES='
 args-none
-exec-once
 '
 
 for file in $TEST_FILES; do
