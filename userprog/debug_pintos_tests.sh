@@ -5,7 +5,7 @@ TEST_FILE='args-none'
 
 if [ $TEST_FILE == 'args-none' ]; then
   pintos --gdb -v -k -T 60 --qemu  --filesys-size=2 -p build/tests/userprog/args-none -a args-none -- -q  -f run args-none < /dev/null
-elif [ $TEST_FILE == '' ]; then
+elif [ $TEST_FILE == 'args-single' ]; then
   pintos --gdb -v -k -T 60 --qemu  --filesys-size=2 -p build/tests/userprog/args-single -a args-single -- -q  -f run 'args-single onearg' < /dev/null
 elif [ $TEST_FILE == 'args-multiple' ]; then
   pintos --gdb -v -k -T 60 --qemu  --filesys-size=2 -p build/tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!' < /dev/null
