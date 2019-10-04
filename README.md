@@ -71,7 +71,7 @@ Things to note
 
 # How to debug a pintos test with GDB
 
-To start debugging, run the `debug_pintos_tests.sh` 'script'.
+To start debugging, run the `debug_pintos_tests.sh` 'script' (make sure to open it up and change the test name to the one you want to debug).
 
 You'll notice that the output is paused. This is because the pintos process you just ran is waiting for you to attach your GDB debugger. 
 
