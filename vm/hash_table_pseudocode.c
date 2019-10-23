@@ -27,6 +27,11 @@ bool my_vm_hash_comparison(const struct hash_elem *a_, const struct hash_elem *b
   return A->KEY < B->KEY;
 }
 
+// Initialize the HASH_TABLE
+void my_vm_hash_init() {
+  hash_init(HASH_TABLE, my_vm_hash, my_vm_hash_comparison, NULL);
+}
+
 // Returns a VALUE given the KEY in HASH_TABLE
 struct VALUE* my_vm_hash_lookup(KEY) {
   struct VALUE value;
