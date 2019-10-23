@@ -1,11 +1,11 @@
 
 // TODO:
 // Remember that the whole point of a hash table is to map 'keys' to 'values'
-// 0. Copy and paste this code into one of your .c files and then follow the 'find-and-replace' instructions below
+// 0. Copy and paste this code into one of your .c files (or just modify this file) and then follow the
+//    'find-and-replace' instructions below
 // 1. Replace KEY with the key for your hash table (figure this out)
 // 2. Replace VALUE with the value for your hash table (figure this out)
 // 3. Replace HASH_TABLE with your hash table (figure this out)
-// 4. This code doesn't compile so when you're done, remove this file (or rename it to blahblahblah.txt)
 
 struct hash* HASH_TABLE;
 
