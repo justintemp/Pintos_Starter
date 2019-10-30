@@ -7,6 +7,8 @@
 // 2. Replace VALUE with the value for your hash table (figure this out)
 // 3. Replace HASH_TABLE with your hash table (figure this out)
 
+#include "lib/kernel/hash.h"
+
 struct hash* HASH_TABLE;
 
 struct VALUE {
