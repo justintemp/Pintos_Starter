@@ -28,6 +28,7 @@ check:: results
 	FAILURES="`egrep '^FAIL ' $< | wc -l | sed 's/[ 	]//g;'`"; \
 	if [ $$FAILURES = 0 ]; then					  \
 		echo "All $$COUNT tests passed.";			  \
+    echo "--> Ha! Screw you pintos!";			  \
 	else								  \
 		echo "$$FAILURES of $$COUNT tests failed.";		  \
 		exit 1;							  \

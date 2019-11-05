@@ -1,9 +1,7 @@
 #!/bin/bash
 
-TEST_FILES='
-args-none
-page-parallel
-'
+# NOTE: change this to the test name
+TEST_FILES='args-none'
 
 for file in $TEST_FILES; do
 

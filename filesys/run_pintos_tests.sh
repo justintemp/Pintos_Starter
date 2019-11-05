@@ -1,10 +1,7 @@
 #!/bin/bash
 
-# Change this to have the test(s) you want to run
-TEST_FILES='
-args-none
-dir-mk-tree
-'
+# NOTE: change this to have the test name
+TEST_FILES='args-none'
 
 for file in $TEST_FILES; do
 

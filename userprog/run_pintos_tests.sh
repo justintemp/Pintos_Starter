@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# NOTE: change this to the test name(s)
-TEST_FILES='
-args-none
-'
+# NOTE: change this to the test name
+TEST_FILES='args-none'
 
 for file in $TEST_FILES; do
 
