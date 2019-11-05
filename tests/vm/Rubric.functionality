@@ -6,9 +6,9 @@ Functionality of virtual memory subsystem:
 3	pt-grow-pusha
 
 - Test paging behavior.
-3	page-linear
-3	page-parallel
+5	page-linear
+2	page-parallel
 3	page-shuffle
-4	page-merge-seq
-4	page-merge-par
-4	page-merge-stk
+2	page-merge-seq
+2	page-merge-par
+2	page-merge-stk
